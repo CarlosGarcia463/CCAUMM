@@ -1,0 +1,156 @@
+body {
+    /*display: flex;*/
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el banner */
+.banner {
+    background: linear-gradient(135deg, #007bff, #ff8c00);
+  
+    color: white;
+    display: flex;
+    align-items: center;
+
+    
+  }
+  
+  .banner img {
+    margin-right: 10px;
+    max-height: 100px;
+    margin-left: 0; /* Alinea la imagen a la izquierda */
+  }
+  
+  
+  .banner img2 {
+    margin-right: 10px;
+    max-height: 100px;
+    margin-left: 0; /* Alinea la imagen a la izquierda */
+  }
+  
+  .banner h1 {
+    margin: 0; /* Elimina el margen del h1 por defecto */
+    text-align: center; /* Centra el texto horizontalmente */
+    flex: 1; /* Permite que el h1 ocupe el espacio restante */
+  }
+
+
+  /*Estilos para los divs*/
+  .container {
+    display: flex;
+    width: 80%;
+  }
+  
+  .left {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    margin-left: 400px;
+    margin-top: 30px;
+  }
+  
+  .right {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    margin-top: 30px;
+    margin-right: 0px;
+    
+  }
+  
+  form {
+    width: 600px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+    
+  }
+ 
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #d0d0d0;
+  }
+  
+
+  /*estilos para el forms*/
+  
+form {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 50px;
+    background-color: #f9f9f9;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+label {
+   /* display: inline-block;*/
+    width: 150px;
+    font-weight: bold;
+}
+
+.actions{
+  /* display: inline-block;*/
+  width: 150px;
+  font-weight: bold;
+  margin-left: 260px;
+}
+
+select, input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+/*boton*/
+.boton-agendar {
+    display: block; /* Cambiado a "block" para que ocupe todo el ancho del formulario */
+    margin: 0 auto; /*   Margen automático para centrar horizontalmente */
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .boton-agendar:hover {
+    background-color: #00AEEF;
+  }
+
+  .boton {
+ 
+    margin: 0 auto; /* Margen automático para centrar horizontalmente */
+    padding: 10px 20px;
+    background-color: #0aa824;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 0px;
+  }
+  
+  .boton:hover {
+    background-color: #00AEEF;
+  }
