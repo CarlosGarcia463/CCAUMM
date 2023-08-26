@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de inicio de sesión S-C-C</title>
   <link rel="stylesheet" href="styleslogin.css">
 </head>
-<body> 
+
+<body>
   <div class="contenedor-form">
-    <img src="img\LogoUamMante2.png" >
-    <form action="#">
-      <input type="text" name="matricula" placeholder="Matrícula">
-      <input type="password" name=contraseña" placeholder="Contraseña">
+    <img src="img\LogoUamMante2.png">
+    <form action="log.php" method="POST">
+
+      <input type="text" name="matricula" placeholder="Matrícula" id="matricula">
+      <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña">
 
       <!--<button type="submit">Iniciar sesión</button> -->
-      <input type="submit" class ="inicio" value="Iniciar sesión">
-      
+      <input type="submit" class="inicio" value="Login">
+
     </form>
   </div>
+
 </body>
+
 </html>

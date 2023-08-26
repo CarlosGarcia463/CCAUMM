@@ -1,103 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administracion de Salas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administracion de Salas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="banner">
-       
-  
-          <img src="img\logo_UAT_HTML.png" alt="Logo">
-          <h1>CC-UAMM</h1>
-          <img src="img\UAMM.png" alt="Logo"> 
-  
-      </div>
+  <div class="banner">
 
- 
 
-      <div class="container">
-        <div class="left">
-            <form action="registro.php" name="" method="POST" >
-       
+    <img src="img\logo_UAT_HTML.png" alt="Logo">
+    <h1>CC-UAMM</h1>
+    <img src="img\UAMM.png" alt="Logo">
 
-                <label for="Fecha">Fecha:</label>
-                <input type="date" name="fecha" id="fecha">
-            
-                <br>
-            
-                <label for="Hora">Hora:</label>
-                <input type="time" name="hora" id="hora">
-            
-                <br>
-            
-                <label for="Salas">Salas:</label>
-                <select name="Salas" id="Salas">
+  </div>
 
-                    <option value="Sala 1">Sala 1</option>
-                    <option value="Sala 2">Sala 2</option>
-                    <option value="Sala 3">Sala 3</option>
-                    <option value="CEAM">CEAM</option>
-                </select>
-            
-                <br>
-            
-                <label for="Carrera">Carrera:</label>
-                <select name="Carrera" id="Carrera" onchange="cambiaGrupo()">
-                  
-                    <option value="0" disabled selected>Elige Una Carrera</option>
-                    <option value="ISC">Ingeniero en sistemas computacionales</option>
-                    <option value="IBI">Ingeniero bioquímico industrial</option>
-                    <option value="IA">Ingeniero agrónomo</option>
-                    <option value="LE">Licenciado en enfermería</option>
-                    <option value="LNS">Licenciado en nutrición</option>
-                    <option value="CP">Contador Público</option>
-                </select>
-            
-                <br>
-            
-                <label for="Grupo">Grupo:</label>
-                <select name="Grupo" id="Grupo">
-                    <!-- Opciones de Grupo generadas dinámicamente mediante JavaScript -->
-                </select>
-            
-                <br>
-            
-                <label for="Materia">Materia:</label>
-                <input type="text" name="materia" id="materia">
-        
-                
-            
-                <br>
-            
-                <label for="cantidadAlumnos">Cantidad de Alumnos:</label>
-                <input type="number" name="alumnos" id="alumnos" min="1">
-            
-                <br>
-            
-                <label for="maestro">Maestro:</label>
-                <input type="text" name="maestro" id="maestro">
-                <!--<button type="button" class="boton-agendar">Agendar</button>-->
-                <!--<button type="button" class="boton">Cerrar sesion</button>-->
-                <td align="center">
-                    <input class="boton-agendar"
-                      type="submit"
-                      name="Enviar"
-                      id="Enviar"
-                      value="Agendar"
-                    />
-                  </td>
+  <div>
+    <table>
+      <th>Biennvenido: </th>
 
-                <br>
-                <br>
-        
-                                
-        
-        </div>
-        <div class="right">
-          <h2>Agenda de Salas</h2>
+
+      <!--<th><input type="submit" class ="inicio" value="Cerra Sesion"  href="CerrarSesion.php"></th>-->
+      <td><a href="CerrarSesion.php" class="btn btn-danger">Cerrar Sesion</a></td>
+
+    </table>
+
+  </div>
+
+
+
+  <div class="container">
+    <div class="left">
+      <form action="registro.php" name="" method="POST">
+
+
+        <label for="Fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha">
+
+        <br>
+
+        <label for="Hora">Hora:</label>
+        <input type="time" name="hora" id="hora">
+
+        <br>
+
+        <label for="Salas">Salas:</label>
+        <select name="Salas" id="Salas">
+
+          <option value="Sala 1">Sala 1</option>
+          <option value="Sala 2">Sala 2</option>
+          <option value="Sala 3">Sala 3</option>
+          <option value="CEAM">CEAM</option>
+        </select>
+
+        <br>
+
+        <label for="Carrera">Carrera:</label>
+        <select name="Carrera" id="Carrera" onchange="cambiaGrupo()">
+
+          <option value="0" disabled selected>Elige Una Carrera</option>
+          <option value="ISC">Ingeniero en sistemas computacionales</option>
+          <option value="IBI">Ingeniero bioquímico industrial</option>
+          <option value="IA">Ingeniero agrónomo</option>
+          <option value="LE">Licenciado en enfermería</option>
+          <option value="LNS">Licenciado en nutrición</option>
+          <option value="CP">Contador Público</option>
+        </select>
+
+        <br>
+
+        <label for="Grupo">Grupo:</label>
+        <select name="Grupo" id="Grupo">
+          <!-- Opciones de Grupo generadas dinámicamente mediante JavaScript -->
+        </select>
+
+        <br>
+
+        <label for="Materia">Semestre:</label>
+        <input type="text" name="semestre" id="semestre">
+
+        <label for="Materia">Materia:</label>
+        <input type="text" name="materia" id="materia">
+
+        <br>
+
+        <label for="cantidadAlumnos">Cantidad de Alumnos:</label>
+        <input type="number" name="alumnos" id="alumnos" min="1">
+
+        <br>
+
+        <label for="maestro">Maestro:</label>
+        <input type="text" name="maestro" id="maestro">
+        <!--<button type="button" class="boton-agendar">Agendar</button>-->
+        <!--<button type="button" class="boton">Cerrar sesion</button>-->
+        <td align="center">
+          <input class="boton-agendar" type="submit" name="Enviar" id="Enviar" value="Agendar" />
+        </td>
+
+        <br>
+        <br>
+
+
+
+    </div>
+    <div class="right">
+      <!-- <h2>Agenda de Salas</h2>
           <table>
             <thead>
               <tr>
@@ -106,9 +116,11 @@
                 <th>Sala</th>
                 <th>Carrera</th>
                 <th>Grupo</th>
+                <th>Semestre</th>
+
                 <th>Materia</th>
                 <th>Alumnos</th>
-                <th>Mestro</th>
+                <th>Maestro</th>
               </tr>
             </thead>
             <tbody>
@@ -121,12 +133,14 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
               </tr>
               
             </tbody>
-          </table>
-        </div>
-      </div>
-      <script src="grupos.js"></script>
+          </table> -->
+    </div>
+  </div>
+  <script src="grupos.js"></script>
 </body>
+
 </html>

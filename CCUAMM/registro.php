@@ -1,4 +1,3 @@
-/*se registrara con el metod post */
 <?php
 /*
 //validar datos del sevidor
@@ -69,6 +68,7 @@ if (!$connection) {
 $db_select = mysqli_select_db($connection, "ccuam");
 if (!$db_select) {
     die("Error al seleccionar la base de datos: " . mysqli_error($connection));
+
 }
 
 // Declaramos los inputs
@@ -116,14 +116,16 @@ if (isset($_POST["Grupo"])) {
 } else {
     $grupo = ""; // O algún valor predeterminado si la clave no está definida
 }
+$semestre = $_POST["semestre"];
 $materia = $_POST["materia"];
 $alumnos = $_POST["alumnos"];
 $maestro = $_POST["maestro"];
 
 // Preparamos la consulta para insertar los datos
-$consulta = "INSERT INTO salas (fecha, hora, sala, carrera, grupo, materia, alumnos, maestro) 
-             VALUES ('$fecha', '$hora', '$sala', '$carrera', '$grupo', '$materia', '$alumnos', '$maestro')";
+$consulta = "INSERT INTO salas (fecha, hora, sala, carrera, grupo, semestre, materia, alumnos, maestro) 
+             VALUES ('$fecha', '$hora', '$sala', '$carrera', '$grupo', '$semestre','$materia', '$alumnos', '$maestro')";
 
+/*
 // Ejecutamos la consulta
 if (mysqli_query($connection, $consulta)) {
    // echo "Datos insertados correctamente.";
@@ -131,6 +133,18 @@ if (mysqli_query($connection, $consulta)) {
 } else {
     echo "Error al insertar los datos: " . mysqli_error($connection);
 }
+*/
+if (mysqli_query($connection, $consulta)) {
+    echo "<script>
+            window.onload = function() {
+                alert('¡Hemos agendado correctamente!');
+                window.location.href = 'adsalas.html'; // Redirigir después de mostrar la alerta
+            };
+          </script>";
+} else {
+    echo "Error al insertar los datos: " . mysqli_error($connection);
+}
+
 
 // Cerramos la conexión
 mysqli_close($connection);
